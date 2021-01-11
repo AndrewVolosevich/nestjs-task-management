@@ -1,0 +1,6 @@
+server:
+  origin: http://nestjscourse-taskmanagement-frontend.s3-website.eu-central-1.amazonaws.com
+
+db:
+  synchronize: false
+

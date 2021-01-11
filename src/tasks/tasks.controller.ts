@@ -2,7 +2,7 @@ import {
   Body,
   Controller,
   Delete,
-  Get,
+  Get, Logger,
   Param,
   ParseIntPipe,
   Patch,
@@ -26,7 +26,7 @@ export class TasksController {
   constructor(private tasksService: TasksService) {}
 
   @Get()
-  getTasks(
+  async getTasks(
     @Body(ValidationPipe) getTasksFilterDto: GetTasksFilterDto,
     @GetUser() user: User
   ) {
